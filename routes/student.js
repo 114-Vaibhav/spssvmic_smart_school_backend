@@ -109,8 +109,8 @@ router.post('/pay-fees', auth('student'), async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `${process.env.success_url}?session_id={CHECKOUT_SESSION_ID}&fee_id=${fee_id}`,
-            cancel_url: `${process.env.cancel_url}`,
+            success_url: `${process.env.SUCCESS_URL}?session_id={CHECKOUT_SESSION_ID}&fee_id=${fee_id}`,
+            cancel_url: `${process.env.CANCEL_URL}`,
             metadata: {
                 fee_id: fee_id.toString(),
                 student_id: req.user.id.toString(),
