@@ -18,7 +18,11 @@ app.post('/api/student/webhook', express.raw({ type: 'application/json' }), stud
 
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: 'https://spssvmic.netlify.app/', // your actual Netlify domain
+    credentials: true
+}));
 app.use(bodyParser.json());
 
 // Routes
