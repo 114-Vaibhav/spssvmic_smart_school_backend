@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
+
 app.use('/api/student', studentRoutes);
 app.use('/api/adStudent', adStudentRoutes);
 app.use('/api/faculty', facultyRoutes);
